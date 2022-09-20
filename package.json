@@ -1,0 +1,22 @@
+{
+  "name": "nextjs-fullstack-arquitetura-componentes-front-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Felipe Marinho <npm@felipemarinho.dev> (https://felipemarinho.dev/)",
+  "license": "MIT",
+  "scripts": {
+    "start": "next start",
+    "dev": "next dev",
+    "build": "next build"
+  },
+  "dependencies": {
+    "next": "^12.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.20",
+    "typescript": "4.8.3"
+  }
+}
