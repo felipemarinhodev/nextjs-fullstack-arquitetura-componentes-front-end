@@ -241,6 +241,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.3.1.tgz#27d71a95247a9eaee03d47adee7e3bd594514136"
   integrity sha512-W1ijvzzg+kPEX6LAc+50EYYSEo0FVu7dmTE+t+DM4iOLqgGHoW9uYSz9wCVdkXOEEMP9xhXfGpcSxsfDucyPkA==
 
+"@skynexui/responsive_stylesheet@1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@skynexui/responsive_stylesheet/-/responsive_stylesheet-1.8.1.tgz#a88721ff49e705a0d7205e8ba7f520341aa39b0b"
+  integrity sha512-OKAnRtz0odmEbbwxf84oAzmJ8/cZBjbdCUPlMmHEUx0HBQCPWFoZVa9p3PX5yNnV/3nlbpkpj28ZRD5TVl9p3A==
+
 "@swc/helpers@0.4.11":
   version "0.4.11"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.11.tgz#db23a376761b3d31c26502122f349a21b592c8de"
