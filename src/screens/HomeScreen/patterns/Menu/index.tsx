@@ -1,5 +1,10 @@
 import Box from "@src/components/Box";
+import Text from "@src/components/Text";
 
 export default function Menu() {
-  return <Box>Menu</Box>;
+  return (
+    <Box>
+      <Text>Menu</Text>
+    </Box>
+  );
 }
