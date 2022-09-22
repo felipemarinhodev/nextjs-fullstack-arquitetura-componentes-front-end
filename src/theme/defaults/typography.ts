@@ -153,5 +153,3 @@ export const typography = {
     },
   },
 } as const;
-
-export type variantsTypes = keyof typeof typography.variants;
