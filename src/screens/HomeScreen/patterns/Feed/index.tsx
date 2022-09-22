@@ -1,7 +1,6 @@
-// import * as S from "./styles";
-
 import Box from "@src/components/Box";
 import Icon from "@src/components/Icon";
+import Image from "@src/components/Image";
 import Text from "@src/components/Text";
 import React from "react";
 
@@ -20,6 +19,15 @@ export default function Feed({ children }: FeedProps) {
 
 Feed.Header = () => (
   <Box>
+    <Image
+      src="https://github.com/felipemarinhodev.png"
+      alt="Imagem de perfil do Felipe Marinho"
+      styleSheet={{
+        width: "128px",
+        height: "128px",
+        borderRadius: "100%",
+      }}
+    />
     <Icon name="youtube" />
     <Icon name="twitter" />
     <Icon name="instagram" />
