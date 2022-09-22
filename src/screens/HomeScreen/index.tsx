@@ -1,13 +1,22 @@
 import Box from "@src/components/Box";
 import Text from "@src/components/Text";
+import { useTheme } from "@src/theme/ThemeProvider";
 import Background from "./patterns/Background";
 import Feed from "./patterns/Feed";
 import Footer from "./patterns/Footer";
 import Menu from "./patterns/Menu";
 
 export default function HomeScreen() {
+  const theme = useTheme();
   return (
-    <Box tag="main">
+    <Box
+      tag="main"
+      styleSheet={{
+        backgroundColor: theme.colors.positive.x100,
+        flex: 1,
+        alignItems: "center",
+      }}
+    >
       <Background />
       <Menu />
       <Feed>
