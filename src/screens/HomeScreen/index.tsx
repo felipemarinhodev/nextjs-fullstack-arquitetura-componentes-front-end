@@ -2,6 +2,7 @@ import Box from "@src/components/Box";
 import Text from "@src/components/Text";
 import Background from "./patterns/Background";
 import Feed from "./patterns/Feed";
+import Footer from "./patterns/Footer";
 import Menu from "./patterns/Menu";
 
 export default function HomeScreen() {
@@ -14,6 +15,7 @@ export default function HomeScreen() {
         <Text>Últimas Atualizações</Text>
         <Feed.Posts />
       </Feed>
+      <Footer />
     </Box>
   );
 }
