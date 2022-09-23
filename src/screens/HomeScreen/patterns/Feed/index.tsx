@@ -1,6 +1,5 @@
 import Box from "@src/components/Box";
 import { Button } from "@src/components/Button";
-import Icon from "@src/components/Icon";
 import Image from "@src/components/Image";
 import Text from "@src/components/Text";
 import { useTheme } from "@src/theme/ThemeProvider";
@@ -25,33 +24,58 @@ export default function Feed({ children }: FeedProps) {
         paddingHorizontal: "32px",
       }}
     >
-      <Text>Feed Base</Text>
       {children}
     </Box>
   );
 }
 
-Feed.Header = () => (
-  <Box>
-    <Button>Olá pessoas!</Button>
-    <Button.Base href="https://github.com/felipemarinhodev">
-      <Image
-        src="https://github.com/felipemarinhodev.png"
-        alt="Imagem de perfil do Felipe Marinho"
+Feed.Header = () => {
+  const theme = useTheme();
+  return (
+    <Box
+      styleSheet={{
+        borderBottom: `1px solid ${theme.colors.neutral.x200}`,
+        marginBottom: "24px",
+      }}
+    >
+      <Box
         styleSheet={{
-          width: "128px",
-          height: "128px",
-          borderRadius: "100%",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          gap: "16px",
+          marginBottom: "16px",
         }}
-      />
-    </Button.Base>
-    <Icon name="youtube" />
-    <Icon name="twitter" />
-    <Icon name="instagram" />
-    <Icon name="github" />
-    <Text>Feed Header</Text>
-  </Box>
-);
+      >
+        <Button.Base href="https://github.com/felipemarinhodev">
+          <Image
+            src="https://github.com/felipemarinhodev.png"
+            alt="Imagem de perfil do Felipe Marinho"
+            styleSheet={{
+              width: "128px",
+              height: "128px",
+              borderRadius: "100%",
+            }}
+          />
+        </Button.Base>
+        <Box
+          styleSheet={{
+            justifyContent: "space-between",
+          }}
+        >
+          <Button fullWidth colorVariant="primary" size="xl" href="/">
+            Newsletter
+          </Button>
+          <Button fullWidth colorVariant="neutral" size="xl" href="/">
+            Bora beber um café?
+          </Button>
+        </Box>
+      </Box>
+      <Text tag="h1" variant="heading4">
+        Felipe Marinho
+      </Text>
+    </Box>
+  );
+};
 
 Feed.Posts = () => (
   <Box>
