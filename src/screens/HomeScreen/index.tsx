@@ -3,6 +3,7 @@ import { useTheme } from "@src/theme/ThemeProvider";
 import Background from "./patterns/Background";
 import Feed from "./patterns/Feed";
 import Footer from "./patterns/Footer";
+import Menu from "./patterns/Menu";
 
 export default function HomeScreen() {
   const theme = useTheme();
@@ -16,6 +17,7 @@ export default function HomeScreen() {
       }}
     >
       <Background />
+      <Menu />
       <Feed>
         <Feed.Header />
       </Feed>
