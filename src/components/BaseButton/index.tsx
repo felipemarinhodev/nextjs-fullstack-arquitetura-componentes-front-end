@@ -6,7 +6,7 @@ import { useRipple } from "react-use-ripple";
 import styled from "styled-components";
 import Text from "../Text";
 
-interface BaseButtonProps {
+export interface BaseButtonProps {
   children: React.ReactNode;
   href?: string;
   textVariant?: ThemeTypographyVariants;
