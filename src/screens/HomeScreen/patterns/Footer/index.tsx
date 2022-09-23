@@ -15,6 +15,7 @@ export default function Footer() {
         paddingVertical: "24px",
         justifyContent: "center",
         alignItems: "center",
+        textAlign: "center",
       }}
     >
       <Text variant="body2">Feito por Felipe Marinho</Text>
