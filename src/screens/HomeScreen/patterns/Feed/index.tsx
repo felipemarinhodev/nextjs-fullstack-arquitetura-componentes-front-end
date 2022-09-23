@@ -47,17 +47,16 @@ Feed.Header = () => {
           marginBottom: "16px",
         }}
       >
-        <Button.Base href="https://github.com/felipemarinhodev">
-          <Image
-            src="https://github.com/felipemarinhodev.png"
-            alt="Imagem de perfil do Felipe Marinho"
-            styleSheet={{
-              width: { xs: "100px", md: "128px" },
-              height: { xs: "100px", md: "128px" },
-              borderRadius: "100%",
-            }}
-          />
-        </Button.Base>
+        <Image
+          src="https://github.com/felipemarinhodev.png"
+          alt="Imagem de perfil do Felipe Marinho"
+          styleSheet={{
+            width: { xs: "100px", md: "128px" },
+            height: { xs: "100px", md: "128px" },
+            borderRadius: "100%",
+          }}
+        />
+
         <Box
           styleSheet={{
             justifyContent: "space-between",
@@ -99,9 +98,11 @@ Feed.Header = () => {
           </Box>
         </Box>
       </Box>
-      <Text tag="h1" variant="heading4">
-        Felipe Marinho
-      </Text>
+      <Button.Base href="https://github.com/felipemarinhodev">
+        <Text tag="h1" variant="heading4">
+          Felipe Marinho
+        </Text>
+      </Button.Base>
     </Box>
   );
 };

@@ -49,12 +49,13 @@ export default function BaseButton({
         color: "inherit",
         outline: "0",
         cursor: "pointer",
-        textDecoder: "none",
+        textDecoration: "none",
         ...styleSheet,
       }}
       onClick={(event) => {
         isLink && event.preventDefault();
         isLink && router.push(href);
+        !isLink && props.onClick && props.onClick(event);
       }}
     >
       {children}
