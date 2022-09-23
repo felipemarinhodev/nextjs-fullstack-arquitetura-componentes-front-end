@@ -36,6 +36,7 @@ Feed.Header = () => {
       styleSheet={{
         borderBottom: `1px solid ${theme.colors.neutral.x200}`,
         marginBottom: "24px",
+        paddingBottom: "24px",
       }}
     >
       <Box
@@ -51,8 +52,8 @@ Feed.Header = () => {
             src="https://github.com/felipemarinhodev.png"
             alt="Imagem de perfil do Felipe Marinho"
             styleSheet={{
-              width: "128px",
-              height: "128px",
+              width: { xs: "100px", md: "128px" },
+              height: { xs: "100px", md: "128px" },
               borderRadius: "100%",
             }}
           />
@@ -62,12 +63,40 @@ Feed.Header = () => {
             justifyContent: "space-between",
           }}
         >
-          <Button fullWidth colorVariant="primary" size="xl" href="/">
-            Newsletter
-          </Button>
-          <Button fullWidth colorVariant="neutral" size="xl" href="/">
-            Bora beber um café?
-          </Button>
+          <Box
+            styleSheet={{
+              flex: 1,
+              justifyContent: "space-between",
+              display: {
+                xs: "none",
+                md: "flex",
+              },
+            }}
+          >
+            <Button fullWidth colorVariant="primary" size="xl" href="/">
+              Newsletter
+            </Button>
+            <Button fullWidth colorVariant="neutral" size="xl" href="/">
+              Bora beber um café?
+            </Button>
+          </Box>
+          <Box
+            styleSheet={{
+              flex: 1,
+              justifyContent: "space-between",
+              display: {
+                xs: "flex",
+                md: "none",
+              },
+            }}
+          >
+            <Button fullWidth colorVariant="primary" size="xs" href="/">
+              Newsletter
+            </Button>
+            <Button fullWidth colorVariant="neutral" size="xs" href="/">
+              Partiu um café?
+            </Button>
+          </Box>
         </Box>
       </Box>
       <Text tag="h1" variant="heading4">
