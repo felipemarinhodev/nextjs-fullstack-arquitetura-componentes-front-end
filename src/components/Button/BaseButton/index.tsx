@@ -1,10 +1,10 @@
+import Text from "@src/components/Text";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import { ThemeTypographyVariants } from "@src/theme/theme";
 import { useRouter } from "next/router";
 import React from "react";
 import { useRipple } from "react-use-ripple";
 import styled from "styled-components";
-import Text from "../Text";
 
 export interface BaseButtonProps {
   children: React.ReactNode;
