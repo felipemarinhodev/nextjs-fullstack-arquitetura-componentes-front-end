@@ -9,6 +9,10 @@ import styled from "styled-components";
 export interface BaseButtonProps {
   children: React.ReactNode;
   href?: string;
+  /**
+   * For change the style of the Typography of the Button use this element.
+   * @default 'body2'
+   */
   textVariant?: ThemeTypographyVariants;
   styleSheet?: StyleSheet;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
