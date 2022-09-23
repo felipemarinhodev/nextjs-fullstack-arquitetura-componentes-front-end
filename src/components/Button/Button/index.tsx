@@ -1,6 +1,7 @@
 import { useTheme } from "@src/theme/ThemeProvider";
 import React from "react";
 import BaseButton, { BaseButtonProps } from "../BaseButton";
+import { buttonSize, ButtonSize } from "../buttonSize";
 import { ColorVariant, colorVariantBy, Variant } from "../colorVariantBy";
 
 interface ButtonProps extends BaseButtonProps {
@@ -12,6 +13,7 @@ interface ButtonProps extends BaseButtonProps {
   fullWidth?: boolean;
   colorVariant?: ColorVariant;
   variant?: Variant;
+  size?: ButtonSize;
 }
 export default function Button({
   children,
@@ -19,6 +21,7 @@ export default function Button({
   fullWidth,
   colorVariant,
   variant,
+  size,
 }: ButtonProps) {
   const theme = useTheme();
 
@@ -27,6 +30,7 @@ export default function Button({
       styleSheet={{
         alignSelf: "flex-start",
         ...colorVariantBy(theme, colorVariant, variant),
+        ...buttonSize[size],
         ...(fullWidth && {
           alignSelf: "initial",
         }),
@@ -40,8 +44,9 @@ export default function Button({
 
 Button.defaultProps = {
   fullWidth: false,
-  colorVariant: "positive",
   variant: "contained",
+  colorVariant: "positive",
+  size: "sm",
 };
 
 Button.Base = BaseButton;
