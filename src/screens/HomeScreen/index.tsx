@@ -1,4 +1,5 @@
 import Box from "@src/components/Box";
+import Link from "@src/components/Link";
 import Text from "@src/components/Text";
 import { useTheme } from "@src/theme/ThemeProvider";
 import Background from "./patterns/Background";
@@ -17,6 +18,10 @@ export default function HomeScreen() {
         alignItems: "center",
       }}
     >
+      <Link colorVariant="negative" href="/sobre">
+        Vá para a página Sobre
+      </Link>
+      <Link href="https://google.com">Ir para o Google</Link>
       <Background />
       <Menu />
       <Feed>
