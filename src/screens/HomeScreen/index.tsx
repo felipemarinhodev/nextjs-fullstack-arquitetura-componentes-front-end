@@ -31,7 +31,8 @@ export default function HomeScreen() {
         </Text>
         <Feed.Posts />
       </Feed>
-      <Footer /> */}
+    */}
+      <Footer />
     </Box>
   );
 }
