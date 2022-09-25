@@ -2,7 +2,7 @@ import { BaseComponent } from "@src/theme/BaseComponent";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import React from "react";
 
-interface BoxProps {
+export interface BoxProps {
   tag?: "main" | "div" | "article" | "section" | "ul" | string;
   children?: React.ReactNode;
   styleSheet?: StyleSheet;
