@@ -5,7 +5,7 @@ import NextLink from "next/link";
 import React from "react";
 import Text from "../Text";
 
-interface LinkProps {
+export interface LinkProps {
   href: string;
   children: React.ReactNode;
   styleSheet?: StyleSheet;

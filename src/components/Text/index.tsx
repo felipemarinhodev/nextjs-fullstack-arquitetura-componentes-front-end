@@ -4,7 +4,7 @@ import { ThemeTypographyVariants } from "@src/theme/theme";
 import { useTheme } from "@src/theme/ThemeProvider";
 import React from "react";
 
-interface TextProps {
+export interface TextProps {
   tag?:
     | "p"
     | "li"
