@@ -2,7 +2,7 @@ import { BaseComponent } from "@src/theme/BaseComponent";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import * as icons from "./svgs/_index";
 
-const iconSizes = {
+export const iconSizes = {
   xs: "12px",
   sm: "16px",
   md: "24px",
@@ -10,13 +10,16 @@ const iconSizes = {
   xl: "36px",
 } as const;
 
-interface IconProps {
-  name: keyof typeof icons;
+export type SizeOptions = keyof typeof iconSizes;
+export type IconNameOptions = keyof typeof icons;
+
+export interface IconProps {
+  name: IconNameOptions;
   styleSheet?: StyleSheet;
-  size?: keyof typeof iconSizes;
+  size?: SizeOptions;
 }
 
-export default function Icon({ name, size, ...props }: IconProps) {
+export default function Icon({ name, size, styleSheet, ...props }: IconProps) {
   const CurrentIcon = icons[name];
   if (!CurrentIcon) {
     return (
@@ -31,6 +34,7 @@ export default function Icon({ name, size, ...props }: IconProps) {
       styleSheet={{
         width: iconSizes[size],
         height: iconSizes[size],
+        ...styleSheet,
       }}
       as="svg"
       color="inherit"
