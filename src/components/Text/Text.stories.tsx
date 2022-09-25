@@ -12,8 +12,6 @@ export default {
   component: Text,
 } as ComponentMeta<typeof Text>;
 
-// const theme = useTheme();
-
 const Template: ComponentStory<typeof Text> = () => <VariantsTextStory />;
 const TryYourselfTemplate: ComponentStory<typeof Text> = (args) => (
   <Text {...args} />
