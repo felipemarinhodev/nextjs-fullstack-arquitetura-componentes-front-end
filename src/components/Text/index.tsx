@@ -1,3 +1,5 @@
+// TODO: remove eslint-disable
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BaseComponent } from "@src/theme/BaseComponent";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import { ThemeTypographyVariants } from "@src/theme/theme";

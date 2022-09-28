@@ -1,3 +1,5 @@
+// TODO: remove eslint-disable
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Text from "@src/components/Text";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import { ThemeTypographyVariants } from "@src/theme/theme";
@@ -22,7 +24,6 @@ const StyledButton = styled(Text)<any>``;
 
 export default function BaseButton({
   children,
-  textVariant,
   styleSheet,
   href,
   ...props

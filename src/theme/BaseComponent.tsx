@@ -1,3 +1,5 @@
+// TODO: remove eslint-disable
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import styled from "styled-components";
 import { StyleSheet } from "@src/theme/StyleSheet";

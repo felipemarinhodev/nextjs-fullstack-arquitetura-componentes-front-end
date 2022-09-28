@@ -1,3 +1,5 @@
+// TODO: remove eslint-disable
+/* eslint-disable react-hooks/rules-of-hooks */
 import Box from "@src/components/Box";
 import { Button } from "@src/components/Button";
 import Image from "@src/components/Image";
