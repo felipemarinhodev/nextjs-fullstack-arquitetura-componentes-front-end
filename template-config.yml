@@ -1,0 +1,8 @@
+site:
+  title: "Felipe Marinho - Timeline"
+  description: "Bem vindo a minha timeline pessoal"
+personal:
+  name: "Felipe Marinho"
+  avatar: "https://github.com/felipemarinhodev.png"
+  socialnetwork:
+    linkedin: "https://linkedin.com/felipemarinhodev"
