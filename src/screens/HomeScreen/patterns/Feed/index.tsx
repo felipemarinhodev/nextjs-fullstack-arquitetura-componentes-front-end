@@ -8,6 +8,7 @@ import { useTheme } from "@src/theme/ThemeProvider";
 import { useTemplateConfig } from "@src/services/template/TemplateConfigContext";
 import Link from "@src/components/Link";
 import Icon from "@src/components/Icon";
+import type { Post } from "@src/services/posts/PostsService";
 
 interface FeedProps {
   children: React.ReactNode;
@@ -130,8 +131,16 @@ Feed.Header = () => {
   );
 };
 
-Feed.Posts = () => (
-  <Box>
-    <Text>Feed Posts</Text>
-  </Box>
-);
+interface FeedPostsProps {
+  posts: Post[];
+}
+
+Feed.Posts = ({ posts }: FeedPostsProps) => {
+  return (
+    <Box>
+      {posts.map(({ title, slug }) => {
+        return <Text key={slug}>{title}</Text>;
+      })}
+    </Box>
+  );
+};
