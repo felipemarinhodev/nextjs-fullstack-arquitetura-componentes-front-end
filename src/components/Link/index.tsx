@@ -12,6 +12,7 @@ export interface LinkProps {
   variant?: ThemeTypographyVariants;
   colorVariant?: ThemeColorsVariants;
   colorVariantEnabled?: boolean;
+  target?: string;
 }
 
 const Link = React.forwardRef(
