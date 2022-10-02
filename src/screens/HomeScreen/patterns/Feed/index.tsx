@@ -1,9 +1,11 @@
+import React from "react";
+
 import Box from "@src/components/Box";
 import { Button } from "@src/components/Button";
 import Image from "@src/components/Image";
 import Text from "@src/components/Text";
 import { useTheme } from "@src/theme/ThemeProvider";
-import React from "react";
+import { useTemplateConfig } from "@src/services/template/TemplateConfigContext";
 
 interface FeedProps {
   children: React.ReactNode;
@@ -31,6 +33,7 @@ export default function Feed({ children }: FeedProps) {
 
 Feed.Header = () => {
   const theme = useTheme();
+  const templateConfig = useTemplateConfig();
   return (
     <Box
       styleSheet={{
@@ -48,7 +51,7 @@ Feed.Header = () => {
         }}
       >
         <Image
-          src="https://github.com/felipemarinhodev.png"
+          src={templateConfig?.personal?.avatar}
           alt="Imagem de perfil do Felipe Marinho"
           styleSheet={{
             width: { xs: "100px", md: "128px" },
@@ -100,7 +103,7 @@ Feed.Header = () => {
       </Box>
       <Button.Base href="https://github.com/felipemarinhodev">
         <Text tag="h1" variant="heading4">
-          Felipe Marinho
+          {templateConfig?.personal?.name}
         </Text>
       </Button.Base>
     </Box>
