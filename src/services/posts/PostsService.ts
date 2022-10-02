@@ -9,6 +9,7 @@ export interface Post {
     excerpt: string;
     tags: string[];
   };
+  image?: string;
   title: string;
   slug: string;
   content: string;
@@ -32,6 +33,7 @@ export default function PostsService() {
             tags: data.tags,
             url: data.url,
           },
+          image: data.image || "",
           title: data.title,
           slug: postFileName.replace(".md", ""),
           content,
