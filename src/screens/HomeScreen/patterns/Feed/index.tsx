@@ -6,6 +6,8 @@ import Image from "@src/components/Image";
 import Text from "@src/components/Text";
 import { useTheme } from "@src/theme/ThemeProvider";
 import { useTemplateConfig } from "@src/services/template/TemplateConfigContext";
+import Link from "@src/components/Link";
+import Icon from "@src/components/Icon";
 
 interface FeedProps {
   children: React.ReactNode;
@@ -106,6 +108,24 @@ Feed.Header = () => {
           {templateConfig?.personal?.name}
         </Text>
       </Button.Base>
+
+      <Box
+        styleSheet={{
+          flexDirection: "row",
+          gap: "4px",
+        }}
+      >
+        {templateConfig.personal?.socialNetworks &&
+          Object.keys(templateConfig.personal.socialNetworks).map((network) => (
+            <Link
+              key={network}
+              href={templateConfig.personal.socialNetworks[network]}
+              target="_blank"
+            >
+              <Icon name={network as any} />
+            </Link>
+          ))}
+      </Box>
     </Box>
   );
 };
