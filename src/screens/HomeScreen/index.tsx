@@ -1,11 +1,12 @@
 import Box from "@src/components/Box";
+import templatePageHOC from "@src/services/template/templatePageHOC";
 import { useTheme } from "@src/theme/ThemeProvider";
 import Background from "./patterns/Background";
 import Feed from "./patterns/Feed";
 import Footer from "./patterns/Footer";
 import Menu from "./patterns/Menu";
 
-export default function HomeScreen(props) {
+function HomeScreen(props) {
   const theme = useTheme();
   return (
     <Box
@@ -25,3 +26,7 @@ export default function HomeScreen(props) {
     </Box>
   );
 }
+
+export default templatePageHOC(HomeScreen, {
+  title: "Home",
+});
