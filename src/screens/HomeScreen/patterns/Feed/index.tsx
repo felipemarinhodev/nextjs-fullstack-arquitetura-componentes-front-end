@@ -9,6 +9,7 @@ import { useTemplateConfig } from "@src/services/template/TemplateConfigContext"
 import Link from "@src/components/Link";
 import Icon from "@src/components/Icon";
 import type { Post } from "@src/services/posts/PostsService";
+import { FeedPost } from "./patterns/FeedPost";
 
 interface FeedProps {
   children: React.ReactNode;
@@ -25,7 +26,7 @@ export default function Feed({ children }: FeedProps) {
         marginTop: "-228px",
         maxWidth: "683px",
         borderRadius: "8px",
-        paddingVertical: "40px",
+        paddingTop: "40px",
         paddingHorizontal: "32px",
       }}
     >
@@ -138,8 +139,21 @@ interface FeedPostsProps {
 Feed.Posts = ({ posts }: FeedPostsProps) => {
   return (
     <Box>
-      {posts.map(({ title, slug }) => {
-        return <Text key={slug}>{title}</Text>;
+      <Text tag="h3" variant="heading3" styleSheet={{ marginBottom: "27px" }}>
+        Últimas Atualizações
+      </Text>
+      {posts.map(({ slug, title, metadata: { date, excerpt, url, tags } }) => {
+        return (
+          <FeedPost
+            key={slug}
+            title={title}
+            date={date}
+            excerpt={excerpt}
+            url={url}
+            tags={tags}
+            image=""
+          />
+        );
       })}
     </Box>
   );
