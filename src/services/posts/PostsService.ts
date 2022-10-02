@@ -4,7 +4,7 @@ import matter from "gray-matter";
 
 export interface Post {
   metadata: {
-    date: Date;
+    date: string;
     url: string;
     excerpt: string;
     tags: string[];
@@ -27,7 +27,7 @@ export default function PostsService() {
         const { data, content } = matter(postFile);
         const post: Post = {
           metadata: {
-            date: data.date.toString(),
+            date: new Date(data.date).toISOString(),
             excerpt: data.excerpt,
             tags: data.tags,
             url: data.url,
