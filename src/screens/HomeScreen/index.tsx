@@ -5,7 +5,7 @@ import Feed from "./patterns/Feed";
 import Footer from "./patterns/Footer";
 import Menu from "./patterns/Menu";
 
-export default function HomeScreen() {
+export default function HomeScreen(props) {
   const theme = useTheme();
   return (
     <Box
