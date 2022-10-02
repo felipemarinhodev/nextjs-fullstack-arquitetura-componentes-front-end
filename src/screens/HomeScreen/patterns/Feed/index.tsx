@@ -142,19 +142,21 @@ Feed.Posts = ({ posts }: FeedPostsProps) => {
       <Text tag="h3" variant="heading3" styleSheet={{ marginBottom: "27px" }}>
         Últimas Atualizações
       </Text>
-      {posts.map(({ slug, title, metadata: { date, excerpt, url, tags } }) => {
-        return (
-          <FeedPost
-            key={slug}
-            title={title}
-            date={date}
-            excerpt={excerpt}
-            url={url}
-            tags={tags}
-            image=""
-          />
-        );
-      })}
+      {posts.map(
+        ({ slug, title, image, metadata: { date, excerpt, url, tags } }) => {
+          return (
+            <FeedPost
+              key={slug}
+              title={title}
+              date={date}
+              excerpt={excerpt}
+              url={url}
+              tags={tags}
+              image={image}
+            />
+          );
+        }
+      )}
     </Box>
   );
 };
