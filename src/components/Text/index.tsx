@@ -1,21 +1,23 @@
-import { BaseComponent } from "@src/theme/BaseComponent";
-import { StyleSheet } from "@src/theme/StyleSheet";
-import { ThemeTypographyVariants } from "@src/theme/theme";
-import { useTheme } from "@src/theme/ThemeProvider";
-import React from "react";
+// TODO: remove eslint-disable
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { BaseComponent } from '@src/theme/BaseComponent';
+import { StyleSheet } from '@src/theme/StyleSheet';
+import { ThemeTypographyVariants } from '@src/theme/theme';
+import { useTheme } from '@src/theme/ThemeProvider';
+import React from 'react';
 
 export interface TextProps {
   tag?:
-    | "p"
-    | "li"
-    | "h1"
-    | "h2"
-    | "h3"
-    | "h4"
-    | "h5"
-    | "h6"
-    | "span"
-    | "a"
+    | 'p'
+    | 'li'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'span'
+    | 'a'
     | string;
   children?: React.ReactNode;
   variant?: ThemeTypographyVariants;
@@ -44,8 +46,8 @@ const Text = React.forwardRef(
 );
 
 Text.defaultProps = {
-  tag: "p",
-  variant: "body2",
+  tag: 'p',
+  variant: 'body2',
 };
 
 export default Text;

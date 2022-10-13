@@ -1,3 +1,5 @@
+// TODO: remove eslint-disable
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from "react";
 
 import Box from "@src/components/Box";

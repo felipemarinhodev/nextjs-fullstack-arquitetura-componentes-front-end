@@ -1,3 +1,5 @@
+// TODO: remove eslint-disable
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Breakpoints } from "@skynexui/responsive_stylesheet";
 
 type ResponsiveProperty<Type> = Partial<Record<Breakpoints, Type>>;
