@@ -1,13 +1,17 @@
 ---
-dateInitial: 2022-10-02
-dateFinal: ''
-title: "Meu novo emprego na empresa X"
+dateInitial: 2021-07-29
+title: "React Developer"
 url: https://www.linkedin.com/in/felipemarinhodev
-excerpt: "É sempre um novo começo"
-type: articles
+excerpt: "Client: Dasa is the largest integrated healthcare network in Brazil, the leader in diagnostic medicine in
+Brazil and Latin America, and the 5th largest in the sector in the world."
+type: jobs
 tags:
-  - emprego-novo
-  - empresa-x
+  - GraphQL
+  - Single-SPA
+  - Micro front-end
+  - React.js
+  - TypeScript
+  - Styled-components
 ---
 
 # Bacon ipsum dolor amet hamburger brisket short loin rump

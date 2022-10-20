@@ -1,13 +1,18 @@
 ---
-dateInitial: 2022-10-02
-dateFinal: ''
-title: "Meu novo emprego na empresa X"
+dateStart: 2021-07-20
+dateEnd: 2022-05-31
+logoCompany: https://s28.q4cdn.com/106679464/files/design/cit-logo.svg
+position: "React Developer"
+company: "CI&T"
 url: https://www.linkedin.com/in/felipemarinhodev
 excerpt: "É sempre um novo começo"
-type: articles
 tags:
-  - emprego-novo
-  - empresa-x
+  - GraphQL
+  - Single-SPA
+  - Micro front-end
+  - React.js
+  - TypeScript
+  - Styled-components
 ---
 
 # Bacon ipsum dolor amet hamburger brisket short loin rump

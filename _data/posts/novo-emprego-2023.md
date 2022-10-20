@@ -1,9 +1,10 @@
 ---
-date: 2023-10-02
+dateInitial: 2023-10-02
 image: https://source.unsplash.com/random/800x600
 title: "Meu novo emprego na empresa Y"
 url: https://www.linkedin.com/in/felipemarinhodev
 excerpt: "É sempre um novo começo"
+type: articles
 tags:
   - emprego-novo
   - empresa-y
