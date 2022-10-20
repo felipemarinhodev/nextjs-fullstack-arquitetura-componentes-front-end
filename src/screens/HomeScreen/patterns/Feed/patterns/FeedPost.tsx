@@ -1,10 +1,10 @@
-import Box from "@src/components/Box";
-import Button from "@src/components/Button/Button";
-import Icon from "@src/components/Icon";
-import Image from "@src/components/Image";
-import Link from "@src/components/Link";
-import Text from "@src/components/Text";
-import { useTheme } from "@src/theme/ThemeProvider";
+import Box from '@src/components/Box';
+import Button from '@src/components/Button/Button';
+import Icon, { IconProps } from '@src/components/Icon';
+import Image from '@src/components/Image';
+import Link from '@src/components/Link';
+import Text from '@src/components/Text';
+import { useTheme } from '@src/theme/ThemeProvider';
 
 interface FeedPostProps {
   title: string;
@@ -13,6 +13,7 @@ interface FeedPostProps {
   date: string;
   tags: string[];
   image: string;
+  type: string;
 }
 export function FeedPost({
   title,
@@ -21,31 +22,32 @@ export function FeedPost({
   tags,
   url,
   image,
+  type,
 }: FeedPostProps) {
   const theme = useTheme();
   const postDate = new Date(date)
-    .toLocaleDateString("pt-BR", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
+    .toLocaleDateString('pt-BR', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
     })
-    .replace(".", "")
-    .replace(/de /g, "");
+    .replace('.', '')
+    .replace(/de /g, '');
   return (
     <Box
       styleSheet={{
-        position: "relative",
-        paddingBottom: "35px",
+        position: 'relative',
+        paddingBottom: '35px',
       }}
     >
-      <FeedPostSideTimeline />
+      <FeedPostSideTimeline type={type} />
       {/* Date */}
       <Text
         variant="body4"
         styleSheet={{
-          fontWeight: "bold",
-          marginBottom: "32px",
-          marginLeft: "4px",
+          fontWeight: 'bold',
+          marginBottom: '32px',
+          marginLeft: '4px',
         }}
       >
         {postDate}
@@ -55,17 +57,17 @@ export function FeedPost({
         href={url}
         variant="body1"
         styleSheet={{
-          marginBottom: "8px",
-          display: "inline",
+          marginBottom: '8px',
+          display: 'inline',
         }}
         colorVariantEnabled={false}
       >
         <Box
           tag="span"
           styleSheet={{
-            display: "inline",
-            padding: "2px",
-            borderRadius: "4px",
+            display: 'inline',
+            padding: '2px',
+            borderRadius: '4px',
             color: theme.colors.neutral.x800,
             backgroundColor: theme.colors.neutral.x200,
             hover: {
@@ -81,7 +83,7 @@ export function FeedPost({
       <Text
         variant="body3"
         styleSheet={{
-          marginBottom: "20px",
+          marginBottom: '20px',
         }}
       >
         {excerpt}
@@ -89,8 +91,8 @@ export function FeedPost({
       {/* Tags */}
       <Box
         styleSheet={{
-          flexDirection: "row",
-          gap: "4px",
+          flexDirection: 'row',
+          gap: '4px',
         }}
       >
         {tags?.map((tag) => (
@@ -101,8 +103,8 @@ export function FeedPost({
             styleSheet={{
               color: theme.colors.neutral.x800,
               backgroundColor: theme.colors.neutral.x100,
-              borderRadius: "1000px",
-              padding: "6px 8px",
+              borderRadius: '1000px',
+              padding: '6px 8px',
               hover: {
                 color: theme.colors.primary.x900,
                 backgroundColor: theme.colors.primary.x200,
@@ -127,9 +129,9 @@ export function FeedPost({
         >
           <Image
             styleSheet={{
-              width: "100%",
-              marginTop: "29px",
-              borderRadius: "12px",
+              width: '100%',
+              marginTop: '29px',
+              borderRadius: '12px',
             }}
             src={image}
             alt="Image Description"
@@ -140,40 +142,43 @@ export function FeedPost({
   );
 }
 
-function FeedPostSideTimeline() {
+type FeedPostSideTimelineProps = {
+  type: IconProps | string;
+};
+function FeedPostSideTimeline({ type = 'default' }: FeedPostSideTimelineProps) {
   const theme = useTheme();
 
   return (
     <Box
       styleSheet={{
-        position: "absolute",
+        position: 'absolute',
         top: 0,
         bottom: 0,
         color: theme.colors.neutral.x200,
-        marginLeft: "-16px",
+        marginLeft: '-16px',
       }}
     >
       <Icon
-        size="sm"
-        name="clock_fill"
+        size="md"
+        name={type}
         styleSheet={{
           transform: {
-            xs: "translateX(-50%) scale(.9)",
-            sm: "translateX(-50%)",
+            xs: 'translateX(-50%) scale(.9)',
+            sm: 'translateX(-50%)',
           },
-          position: "absolute",
-          top: "0",
-          left: "0",
+          position: 'absolute',
+          top: '0',
+          left: '0',
         }}
       />
       <Box
         styleSheet={{
-          top: "16px",
-          bottom: "0",
-          margin: "auto",
-          position: "absolute",
-          width: "1px",
-          backgroundColor: "currentColor",
+          top: '16px',
+          bottom: '0',
+          margin: 'auto',
+          position: 'absolute',
+          width: '1px',
+          backgroundColor: 'currentColor',
         }}
       />
     </Box>
