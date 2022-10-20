@@ -1,6 +1,6 @@
 ---
-dateStart: 2021-01-20
-dateEnd: 2021-07-16
+dateInitial: 2021-01-20
+dateFinal: 2021-07-16
 logoCompany: https://play-lh.googleusercontent.com/BcObMsx3dgpe06KdIZZYGVB0kJLht9_Kem10U5AROaTs_VlA_oas75ZWQk95z76uEA=w480-h960
 position: "Software Developer"
 company: "MediPreço"

@@ -1,6 +1,6 @@
 ---
-dateStart: 2021-07-20
-dateEnd: 2022-05-31
+dateInitial: 2021-07-20
+dateFinal: 2022-05-31
 logoCompany: https://s28.q4cdn.com/106679464/files/design/cit-logo.svg
 position: "React Developer"
 company: "CI&T"
