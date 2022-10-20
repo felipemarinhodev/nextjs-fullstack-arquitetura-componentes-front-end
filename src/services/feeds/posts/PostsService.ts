@@ -13,7 +13,7 @@ export interface Post extends IFeed {
 
 export default function PostsService() {
   return {
-    async getAll(): Promise<Post[]> {
+    async getAll(): Promise<IFeed[]> {
       const populate = ({ data, content, fileName }: PopulateProps): Post => ({
         metadata: {
           excerpt: data.excerpt,
@@ -21,9 +21,6 @@ export default function PostsService() {
         },
         tags: data.tags,
         dateInitial: new Date(data.dateInitial).toISOString(),
-        // dateFinal: data.dateFinal
-        //   ? new Date(data.dateFinal).toISOString()
-        //   : undefined,
         image: data.image || '',
         title: data.title,
         slug: fileName.replace('.md', ''),
