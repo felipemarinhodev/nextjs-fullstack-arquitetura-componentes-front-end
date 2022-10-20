@@ -4,13 +4,13 @@ import React from 'react';
 
 import Box from '@src/components/Box';
 import { Button } from '@src/components/Button';
-import Image from '@src/components/Image';
-import Text from '@src/components/Text';
-import { useTheme } from '@src/theme/ThemeProvider';
-import { useTemplateConfig } from '@src/services/template/TemplateConfigContext';
-import Link from '@src/components/Link';
 import Icon from '@src/components/Icon';
-import type { Post } from '@src/services/feeds/posts/PostsService';
+import Image from '@src/components/Image';
+import Link from '@src/components/Link';
+import Text from '@src/components/Text';
+import { IFeed } from '@src/services/feeds/Fetch';
+import { useTemplateConfig } from '@src/services/template/TemplateConfigContext';
+import { useTheme } from '@src/theme/ThemeProvider';
 import { FeedPost } from './patterns/FeedPost';
 
 interface FeedProps {
@@ -167,7 +167,7 @@ Feed.Header = () => {
 };
 
 interface FeedPostsProps {
-  posts: Post[];
+  posts: IFeed[];
 }
 
 Feed.Posts = ({ posts }: FeedPostsProps) => {

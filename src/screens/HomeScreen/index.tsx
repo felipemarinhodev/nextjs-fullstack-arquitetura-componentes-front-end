@@ -1,5 +1,5 @@
 import Box from '@src/components/Box';
-import type { Post } from '@src/services/feeds/posts/PostsService';
+import { IFeed } from '@src/services/feeds/Fetch';
 import templatePageHOC from '@src/services/template/templatePageHOC';
 import { useTheme } from '@src/theme/ThemeProvider';
 import Background from './patterns/Background';
@@ -8,7 +8,7 @@ import Footer from './patterns/Footer';
 import Menu from './patterns/Menu';
 
 interface HomeScreenProps {
-  posts: Post[];
+  posts: IFeed[];
 }
 
 function HomeScreen(props: HomeScreenProps) {
